@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Registro.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="Registro.css">
+    <title>Document</title>
+</head>
+<body>
+    <FORM class="formato" action="index.html" method="post" onsubmit="checkForm(this); return false;">
+        <P>
+            Nombre:
+            <label>
+                <INPUT type="text" name="nombre">
+            </label><BR><BR>
+
+            Apellido:
+            <label>
+                <INPUT type="text" name="apellido">
+            </label><BR><BR>
+
+            Fecha de nacimiento:
+            <label>
+                <input type="date" name="fecha_naci">
+            </label><br><br>
+
+            Correo electrónico:
+            <label>
+                <INPUT type="email" name="email">
+            </label><BR><br>
+
+            Usuario:
+            <input type="text" name="usuario" required pattern="[A-Za-z0-9]+"
+                            title="Sin caracteres extraños"><br>
+
+
+            <p>Contraseña: <label>
+                <input type="password" name="pwd1">
+            </label></p>
+
+            <p>Confirmar Contraseña: <label>
+                <input type="password" name="pwd2">
+            </label></p><br>
+
+
+
+            ¿Ha sufrido enfermedades graves?<br>
+            <div class="control">
+                <label>
+                    <INPUT type="radio" name="enfermedad" onclick="toggle(this)" value="a">
+                </label> Si
+
+                <label>
+                    <INPUT type="radio" name="enfermedad" onclick="toggle(this)" checked="checked" value="b">
+                </label> No<BR><br>
+            </div>
+
+            <div class="enfermedades" id="uno" style="display: none">
+                - Gripa<br>
+                - Cáncer<br>
+                - Meningitis<br>
+                - Otra<br><br>
+                Cuales: <label>
+                <input type="text" name="enfermedad">
+                </label><br><br>
+            </div>
+
+        <INPUT type="submit" value="Verificar"> <INPUT type="reset">
+    </FORM>
+</body>
+</html>

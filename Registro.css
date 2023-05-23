@@ -1,0 +1,13 @@
+ label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff800f;
+}
+
+.formato{
+    background-color: #ff800f;
+}
+p{
+display: flex;
+}
